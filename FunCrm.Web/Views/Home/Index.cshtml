@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "";
+}
+
+<!-- Main Content -->
+<div id="container">
+    @Html.Partial("_Tasks")
+</div>
+
+@section Scripts {
+    <script>
+        $(function() {
+            $('.action-link').click(function () {
+                var link = $(this).attr('data-link');
+
+                $.get('/Home/' + link, {}, function(result) {
+                    $('#container').html(result);
+                });
+            });
+
+            $('#menu-show').click(function() {
+                var isOpen = $('#page-wrapper').hasClass('open');
+
+                if (isOpen) {
+                    $('#page-wrapper').removeClass('open');
+                } else {
+                    $('#page-wrapper').addClass('open');
+                }
+            });
+        });
+    </script>
+}

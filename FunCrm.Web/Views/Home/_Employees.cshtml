@@ -1,0 +1,72 @@
+﻿
+@{
+    ViewBag.Title = "_Employees";
+}
+
+@*<div class="row">
+    <div class="col-xs-12">
+        <div class="widget">
+            <div class="widget-body">
+                <a href="#"><span class="menu-icon fa fa-tasks"></span> Добавить</a>
+            </div>
+        </div>
+    </div>
+</div>*@
+
+<div class="row ng-scope">
+    <div class="col-lg-12">
+        <div class="widget">
+            <div class="widget-header ng-binding">
+                <i class="fa fa-users"></i> Сотрудники
+                <div class="pull-right">
+                    <input type="text" placeholder="Поиск" class="form-control input-sm ng-scope">
+                </div> 
+                @*<div class="pull-right">
+                    <button class="btn btn-sm btn-info ng-scope">Добавить </button>
+                </div>*@
+            </div>
+            <div class="widget-body large no-padding">
+                @*<div class="loading">
+                        <div class="double-bounce1"></div>
+                        <div class="double-bounce2"></div>
+                    </div>*@
+                <div class="widget-content">
+                    <div class="table-responsive ng-scope">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">№</th>
+                                    <th>ФИО</th>
+                                    <th>Должность</th>
+                                    <th>К/Н</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-center">1</td>
+                                    <td>Joe Bloggs</td>
+                                    <td>Super Admin</td>
+                                    <td>AZ23045</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2</td>
+                                    <td>Timothy Hernandez</td>
+                                    <td>Admin</td>
+                                    <td>AU24783</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">3</td>
+                                    <td>Joe Bickham</td>
+                                    <td>User</td>
+                                    <td>AM23781</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="widget"></div>
+        </div>
+    </div>
+</div>
+
