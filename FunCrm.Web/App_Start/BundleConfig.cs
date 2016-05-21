@@ -14,12 +14,24 @@ namespace FunCrm.Web
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
 
+            bundles.Add(new ScriptBundle("~/bundles/highcharts").Include(
+                       "~/Scripts/highcharts/highcharts.js",
+                       "~/Scripts/highcharts/highcharts-more.js",
+                       "~/Scripts/highcharts/modules/data.js",
+                       "~/Scripts/highcharts/modules/exporting.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/bootstrap-datetimepicker").Include(
+                        "~/Scripts/moment-with-locales.min.js",
+                        "~/Scripts/bootstrap-datetimepicker.js"));
+            bundles.Add(new StyleBundle("~/Content/bootstrap-datetimepicker").Include(
+                        "~/Content/bootstrap-datetimepicker.css"));
+
             // Используйте версию Modernizr для разработчиков, чтобы учиться работать. Когда вы будете готовы перейти к работе,
             // используйте средство сборки на сайте http://modernizr.com, чтобы выбрать только нужные тесты.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
-            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
+            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(                    
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 

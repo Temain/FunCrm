@@ -6,7 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/bootstrap-datetimepicker")
     @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/bootstrap-datetimepicker")
+    @Scripts.Render("~/bundles/highcharts")
 </head>
 <body class="hamburg">
     <div id="page-wrapper" class="open">
@@ -108,8 +113,6 @@
             </div><!-- End Page Content -->
         </div><!-- End Content Wrapper -->
     </div><!-- End Page Wrapper -->
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>
 </html>

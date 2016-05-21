@@ -1,7 +1,51 @@
 ﻿
 @{
-    ViewBag.Title = "_Reports";
+    ViewBag.Title = "Отчёты";
 }
 
-<h2>_Reports</h2>
+<div class="row ng-scope">
+    <div class="col-lg-6 col-md-6 col-xs-12">
+        <div class="widget selectable" data-report="ByIncome">
+            <div class="widget-body">
+                @*<div class="loading">
+                        <div class="double-bounce1"></div>
+                        <div class="double-bounce2"></div>
+                    </div>*@
+                <div class="widget-content">
+                    <div class="widget-icon green pull-left ng-scope">
+                        <i class="normal">.xls</i>
+                    </div>
+                    <div class="title ng-scope">Прибыль</div>
+                    <div class="comment ng-scope">Получить данные о прибыли</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-xs-12">
+        <div class="widget selectable" data-report="ByWorkPerformed">
+            <div class="widget-body">
+                @*<div class="loading">
+                    <div class="double-bounce1"></div>
+                    <div class="double-bounce2"></div>
+                </div>*@
+                <div class="widget-content">
+                    <div class="widget-icon red pull-left ng-scope">
+                        <i class="normal">.xls</i>
+                    </div>
+                    <div class="title ng-scope">Выполненные задачи</div>
+                    <div class="comment ng-scope">Получить данные о выполненных задачах</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
+<script>
+    $(function() {
+        $('.widget.selectable').click(function () {
+            var report = $(this).attr('data-report'); 
+
+            window.location = '/Report/' + report;
+        });
+    });
+</script>

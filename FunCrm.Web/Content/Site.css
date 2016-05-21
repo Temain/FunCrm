@@ -48,3 +48,38 @@ ul.tasks-types > li > a.active > .badge {
 ul.tasks-types > li > a {
     color: #a0a0a0 !important;
 }
+
+.widget.selectable:hover {
+    border: 1px #30426a solid;
+    cursor: pointer;
+}
+
+.widget-icon > .normal {
+    font-style: normal;
+}
+
+.mrglf16 {
+    margin-left: 16px;
+}
+
+.float-left { float: left; }
+
+.mrgtop12 { margin-top: 12px; }
+
+.mrgtop24 { margin-top: 24px; }
+
+.mrgtop36 { margin-top: 36px; }
+
+.mrgbtm12 { margin-bottom: 12px; }
+
+.mrgbtm24 { margin-bottom: 24px; }
+
+.mrgbtm36 { margin-bottom: 36px; }
+
+.full-width { width: 100%; }
+
+.float-right { float: right; }
+
+.btn.equal {
+    width: 120px;
+}

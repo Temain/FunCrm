@@ -3,7 +3,6 @@
 }
 
 <div class="row ng-scope">
-    
     <div class="col-lg-3 col-md-6 col-xs-12">
         <div class="widget">
                 <div class="widget-body" ng-class="classes">
@@ -92,9 +91,10 @@
         <div class="widget">
             <div class="widget-header ng-binding">
                 <i class="fa fa-tasks" ng-class="icon"></i> Заказы
-                @*<div class="pull-right">
-                    <a href="#" class="ng-scope">Manage</a>
-                </div>*@
+                <div class="pull-right">
+                    @*<a href="#" class="ng-scope"><i class="fa fa-plus"></i> Добавить</a>*@
+                    <button id="add-task" class="btn btn-sm btn-info ng-scope equal"><i class="fa fa-plus"></i> Добавить </button>
+                </div>
             </div>
             <div class="widget-body large no-padding" ng-class="classes">
                 @*<div class="loading">
@@ -108,7 +108,7 @@
                                 <tr>
                                     <th>Дата заявки</th>
                                     <th>Задача</th>
-                                    <th class="text-center">Имя клиента</th>
+                                    <th class="text-center">Клиент</th>
                                     <th class="text-center">Телефон</th>
                                     <th class="text-center">Статус</th>
                                     <th class="text-center">Стоимость</th>
@@ -235,7 +235,7 @@
             <div class="widget-footer">
                 <ul class="pagination pagination-sm pull-right ng-scope">
                     <li><a href="#">«</a></li>
-                    <li><a href="#">1</a></li>
+                    <li class="active"><a href="#">1</a></li>
                     <li><a href="#">2</a></li>
                     <li><a href="#">3</a></li>
                     <li><a href="#">4</a></li>
@@ -248,3 +248,12 @@
     </div>
 </div>
 
+<script>
+    $(function () {
+        $('#add-task').click(function () {
+            $.post('/Home/AddTask', {}, function (result) {
+                $('#container').html(result);
+            });
+        });
+    });
+</script>

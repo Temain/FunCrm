@@ -18,12 +18,12 @@
         <div class="widget">
             <div class="widget-header ng-binding">
                 <i class="fa fa-users"></i> Сотрудники
+                <div class="pull-right mrglf16">
+                    <button id="add-employee" class="btn btn-sm btn-info ng-scope equal"><i class="fa fa-plus"></i>Добавить </button>
+                </div>
                 <div class="pull-right">
                     <input type="text" placeholder="Поиск" class="form-control input-sm ng-scope">
                 </div> 
-                @*<div class="pull-right">
-                    <button class="btn btn-sm btn-info ng-scope">Добавить </button>
-                </div>*@
             </div>
             <div class="widget-body large no-padding">
                 @*<div class="loading">
@@ -70,3 +70,12 @@
     </div>
 </div>
 
+<script>
+    $(function () {
+        $('#add-employee').click(function () {
+            $.post('/Home/AddEmployee', {}, function (result) {
+                $('#container').html(result);
+            });
+        });
+    });
+</script>

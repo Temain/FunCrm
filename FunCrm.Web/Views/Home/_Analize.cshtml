@@ -3,5 +3,79 @@
     ViewBag.Title = "_Analize";
 }
 
-<h2>_Analize</h2>
+<div class="row ng-scope">
+    <div class="col-lg-12">
+        <div class="widget">
+            <div class="widget-header ng-binding">
+                <i class="fa fa-pie-chart" ng-class="icon"></i> Анализ
+                @*<div class="pull-right">
+                        <a href="#" class="ng-scope">Manage</a>
+                    </div>*@
+            </div>
+            <div class="widget-body extra-large no-padding">
+                @*<div class="loading">
+                        <div class="double-bounce1"></div>
+                        <div class="double-bounce2"></div>
+                    </div>*@
+                <div class="widget-content" style="margin-top: 40px">
+                    <div id="chart" style="width: 100%; height: 400px; margin: 0 auto"></div>
+                </div>
+            </div>           
+        </div>
+    </div>
+</div>
 
+<script>
+    $(function () {
+        $('#chart').highcharts({
+            credits: {
+              enabled: false
+            },
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie'
+            },
+            title: {
+                text: 'Анализ выпонения заказов на ' + moment().format("DD.MM.YYYYг.")
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                        style: {
+                            color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                        }
+                    },
+                    showInLegend: true
+                }
+            },
+            series: [{
+                name: 'Brands',
+                colorByPoint: true,
+                data: [{
+                    name: 'Новые',
+                    y: 26.19
+                }, {
+                    name: 'В работе',
+                    y: 14.28,
+                    sliced: true,
+                    selected: true
+                }, {
+                    name: 'Выполнены',
+                    y: 52.38
+                }, {
+                    name: 'Отказ',
+                    y: 7.14
+                }]
+            }]
+        });
+    });
+</script>

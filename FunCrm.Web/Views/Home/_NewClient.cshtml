@@ -1,0 +1,86 @@
+﻿
+@{
+    ViewBag.Title = "Новая клиент";
+}
+
+<div class="row ng-scope">
+    <div class="col-lg-12">
+        <div class="widget">
+            <div class="widget-header ng-binding">
+                <i class="fa fa-users"></i> Новый клиент
+            </div>
+            <div class="widget-body large no-padding">
+                @*<div class="loading">
+                        <div class="double-bounce1"></div>
+                        <div class="double-bounce2"></div>
+                    </div>*@
+                <div class="widget-content">
+                    <form class="mrgtop36 mrgbtm36 mrglf16">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label class="control-label">Фамилия</label>
+                            </div>
+                            <div class="col-md-5">
+                                <input type='text' class="form-control" />
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label class="control-label">Имя</label>
+                            </div>
+                            <div class="col-md-5">
+                                <input type='text' class="form-control" />
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label class="control-label">Отчество</label>
+                            </div>
+                            <div class="col-md-5">
+                                <input type='text' class="form-control" />
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label class="control-label">Телефон</label>
+                            </div>
+                            <div class="col-md-5">
+                                <div class='input-group'>
+                                    <input type='text' class="form-control" />
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-earphone"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mrgtop12">
+                            <div class="col-md-5 col-md-offset-2">
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" id="back-btn" class="btn btn-default equal"><i class="fa fa-arrow-left"></i> Назад</button>
+                                    <button type="button" class="btn btn-success equal"><i class="fa fa-floppy-o"></i> Сохранить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="widget"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function() {
+        $(function () {
+            $('#back-btn').click(function() {
+                $.post('/Home/Clients', {}, function(response) {
+                    $('#container').html(response);
+                });
+            });
+        });
+    });
+</script>
