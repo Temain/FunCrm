@@ -1,29 +1,29 @@
 ﻿
 @{
-    ViewBag.Title = "Сотрудники";
+    ViewBag.Title = "Клиенты";
 }
 
 @*<div class="row">
-    <div class="col-xs-12">
-        <div class="widget">
-            <div class="widget-body">
-                <a href="#"><span class="menu-icon fa fa-tasks"></span> Добавить</a>
+        <div class="col-xs-12">
+            <div class="widget">
+                <div class="widget-body">
+                    <a href="#"><span class="menu-icon fa fa-tasks"></span> Добавить</a>
+                </div>
             </div>
         </div>
-    </div>
-</div>*@
+    </div>*@
 
 <div class="row ng-scope">
     <div class="col-lg-12">
         <div class="widget">
             <div class="widget-header ng-binding">
-                <i class="fa fa-users"></i> Сотрудники
+                <i class="fa fa-users"></i> Клиенты
                 <div class="pull-right">
                     <input type="text" placeholder="Поиск" class="form-control input-sm ng-scope">
-                </div> 
+                </div>
                 @*<div class="pull-right">
-                    <button class="btn btn-sm btn-info ng-scope">Добавить </button>
-                </div>*@
+                        <button class="btn btn-sm btn-info ng-scope">Добавить </button>
+                    </div>*@
             </div>
             <div class="widget-body large no-padding">
                 @*<div class="loading">
@@ -37,7 +37,8 @@
                                 <tr>
                                     <th class="text-left">№</th>
                                     <th>ФИО</th>
-                                    <th>Должность</th>
+                                    <th>Телефон</th>
+                                    <th>Дата</th>
                                     <th class="text-right">Действия</th>
                                 </tr>
                             </thead>
@@ -45,19 +46,22 @@
                                 <tr>
                                     <td class="text-left">1</td>
                                     <td>Петров Пётр Петрович</td>
-                                    <td>Супер админ</td>
+                                    <td>89182645987</td>
+                                    <th>30.02.2016</th>
                                     <td class="text-right"><a href="#" class="text-center text-success"><i class="fa fa-gear"></i></a></td>
                                 </tr>
                                 <tr>
                                     <td class="text-left">2</td>
                                     <td>Сидоров Сидор Сидорович</td>
-                                    <td>Админ</td>
+                                    <td>89182645987</td>
+                                    <th>30.02.2016</th>
                                     <td class="text-right"><a href="#" class="text-center text-success"><i class="fa fa-gear"></i></a></td>
                                 </tr>
                                 <tr>
                                     <td class="text-left">3</td>
                                     <td>Васильев Василий Васильевич</td>
-                                    <td>Пользователь</td>
+                                    <td>89182645987</td>
+                                    <th>30.02.2016</th>
                                     <td class="text-right"><a href="#" class="text-center text-success"><i class="fa fa-gear"></i></a></td>
                                 </tr>
                             </tbody>

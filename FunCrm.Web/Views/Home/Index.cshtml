@@ -12,9 +12,13 @@
         $(function() {
             $('.action-link').click(function () {
                 var link = $(this).attr('data-link');
+                var metaPage = $(this).text();
 
                 $.get('/Home/' + link, {}, function(result) {
                     $('#container').html(result);
+
+                    $('.meta > .page').text(metaPage);
+                    $('.meta > .breadcrumb-links').text('Меню / ' + metaPage);
                 });
             });
 

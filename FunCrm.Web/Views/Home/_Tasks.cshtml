@@ -1,16 +1,250 @@
-﻿
-@{
-    ViewBag.Title = "_Tasks";
+﻿@{
+    ViewBag.Title = "Заказы";
 }
+
+<div class="row ng-scope">
+    
+    <div class="col-lg-3 col-md-6 col-xs-12">
+        <div class="widget">
+                <div class="widget-body" ng-class="classes">
+                    @*<div class="loading">
+                        <div class="double-bounce1"></div>
+                        <div class="double-bounce2"></div>
+                    </div>*@
+                    <div class="widget-content">
+                        <div class="widget-icon green pull-left ng-scope"><i class="fa fa-users"></i>
+                        </div>
+                        <div class="title ng-scope">80</div>
+                        <div class="comment ng-scope">Клиентов</div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-xs-12">
+        <div class="widget">
+                <div class="widget-body" ng-class="classes">
+                    @*<div class="loading">
+                        <div class="double-bounce1"></div>
+                        <div class="double-bounce2"></div>
+                    </div>*@
+                    <div class="widget-content">
+                        <div class="widget-icon red pull-left ng-scope"><i class="fa fa-tasks"></i>
+                        </div>
+                        <div class="title ng-scope">16</div>
+                        <div class="comment ng-scope">Заказов</div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-xs-12">
+        <div class="widget">
+                <div class="widget-body" ng-class="classes">
+                    @*<div class="loading">
+                        <div class="double-bounce1"></div>
+                        <div class="double-bounce2"></div>
+                    </div>*@
+                    <div ng-hide="loading" class="widget-content">
+                        <div class="widget-icon orange pull-left ng-scope"><i class="fa fa-sitemap"></i>
+                        </div>
+                        <div class="title ng-scope">3</div>
+                        <div class="comment ng-scope">Сотрудников</div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-xs-12">
+        <div class="widget">
+                <div class="widget-body">
+                    @*<div class="loading">
+                        <div class="double-bounce1"></div>
+                        <div class="double-bounce2"></div>
+                    </div>*@
+                    <div class="widget-content">
+                        <div class="widget-icon blue pull-left ng-scope"><i class="fa fa-support"></i>
+                        </div>
+                        <div class="title ng-scope">~50 000</div>
+                        <div class="comment ng-scope">Доход в месяц</div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+
 
 <div class="row">
     <div class="col-xs-12">
         <div class="widget">
-            <div class="widget-body">
+            <div class="widget-body no-padding">
+                <ul class="tasks-types">
+                    <li><a class="active" href="#"> Все <span class="badge">42</span></a></li>
+                    <li><a href="#"> Новые <span class="badge">11</span></a></li>
+                    <li><a href="#"> В работе <span class="badge">6</span></a></li>
+                    <li><a href="#"> Выполнены <span class="badge">22</span></a></li>
+                    <li><a href="#"> Отказ <span class="badge">3</span></a></li>
+                </ul>
             </div>
         </div>
     </div>
 </div>
 
-<h2>_Tasks</h2>
+<div class="row ng-scope">
+    <div class="col-lg-12">
+        <div class="widget">
+            <div class="widget-header ng-binding">
+                <i class="fa fa-tasks" ng-class="icon"></i> Заказы
+                @*<div class="pull-right">
+                    <a href="#" class="ng-scope">Manage</a>
+                </div>*@
+            </div>
+            <div class="widget-body large no-padding" ng-class="classes">
+                @*<div class="loading">
+                    <div class="double-bounce1"></div>
+                    <div class="double-bounce2"></div>
+                </div>*@
+                <div ng-hide="loading" class="widget-content">
+                    <div class="table-responsive ng-scope">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Дата заявки</th>
+                                    <th>Задача</th>
+                                    <th class="text-center">Имя клиента</th>
+                                    <th class="text-center">Телефон</th>
+                                    <th class="text-center">Статус</th>
+                                    <th class="text-center">Стоимость</th>
+                                    <th class="text-center">Исполнитель</th>
+                                    <th class="text-right">Действия</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>11.07.2015</td>
+                                <th>Суть задачи</th>
+                                <td class="text-center">Иванов Иван Иванович</td>
+                                <td class="text-center">89180231562</td>
+                                <td class="text-center"><span class="text-success"><i class="fa fa-check"></i></span></td>
+                                <th class="text-center">1 000 руб.</th>
+                                <td class="text-center">Петров Петр Петрович</td>
+                                <td class="text-right"><a href="#" class="text-center text-success"><i class="fa fa-gear"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td>11.07.2015</td>
+                                <th>Суть задачи</th>
+                                <td class="text-center">Иванов Иван Иванович</td>
+                                <td class="text-center">89180231562</td>
+                                <td class="text-center"><span class="text-success"><i class="fa fa-check"></i></span></td>
+                                <th class="text-center">1 000 руб.</th>
+                                <td class="text-center">Петров Петр Петрович</td>
+                                <td class="text-right"><a href="#" class="text-success"><i class="fa fa-gear"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td>11.07.2015</td>
+                                <th>Суть задачи</th>
+                                <td class="text-center">Иванов Иван Иванович</td>
+                                <td class="text-center">89180231562</td>
+                                <td class="text-center"><span tooltip="Server Down!" class="text-danger ng-scope"><i class="fa fa-warning"></i></span></td>
+                                <th class="text-center">1 000 руб.</th>
+                                <td class="text-center">Петров Петр Петрович</td>
+                                <td class="text-right"><a href="#" class="text-success"><i class="fa fa-gear"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td>11.07.2015</td>
+                                <td>Суть задачи</td>
+                                <td class="text-center">Иванов Иван Иванович</td>
+                                <td class="text-center">89180231562</td>
+                                <td class="text-center"><span class="text-success"><i class="fa fa-check"></i></span></td>
+                                <th class="text-center">1 000 руб.</th>
+                                <td class="text-center">Петров Петр Петрович</td>
+                                <td class="text-right"><a href="#" class="text-success"><i class="fa fa-gear"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td>11.07.2015</td>
+                                <td>Суть задачи</td>
+                                <td class="text-center">Иванов Иван Иванович</td>
+                                <td class="text-center">89180231562</td>
+                                <td class="text-center"><span class="text-success"><i class="fa fa-check"></i></span></td>
+                                <th class="text-center">1 000 руб.</th>
+                                <td class="text-center">Петров Петр Петрович</td>
+                                <td class="text-right"><a href="#" class="text-success"><i class="fa fa-gear"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td>11.07.2015</td>
+                                <td>Суть задачи</td>
+                                <td class="text-center">Иванов Иван Иванович</td>
+                                <td class="text-center">89180231562</td>
+                                <td class="text-center"><span class="text-success"><i class="fa fa-check"></i></span></td>
+                                <th class="text-center">1 000 руб.</th>
+                                <td class="text-center">Петров Петр Петрович</td>
+                                <td class="text-right"><a href="#" class="text-success"><i class="fa fa-gear"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td>11.07.2015</td>
+                                <td>Суть задачи</td>
+                                <td class="text-center">Иванов Иван Иванович</td>
+                                <td class="text-center">89180231562</td>
+                                <td class="text-center"><span tooltip="Server Down!" class="text-danger ng-scope"><i class="fa fa-warning"></i></span></td>
+                                <th class="text-center">1 000 руб.</th>
+                                <td class="text-center">Петров Петр Петрович</td>
+                                <td class="text-right"><a href="#" class="text-success"><i class="fa fa-gear"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td>11.07.2015</td>
+                                <td>Суть задачи</td>
+                                <td class="text-center">Иванов Иван Иванович</td>
+                                <td class="text-center">89180231562</td>
+                                <td class="text-center"><span class="text-success"><i class="fa fa-check"></i></span></td>
+                                <th class="text-center">1 000 руб.</th>
+                                <td class="text-center">Петров Петр Петрович</td>
+                                <td class="text-right"><a href="#" class="text-success"><i class="fa fa-gear"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td>11.07.2015</td>
+                                <td>Суть задачи</td>
+                                <td class="text-center">Иванов Иван Иванович</td>
+                                <td class="text-center">89180231562</td>
+                                <td class="text-center"><span class="text-success"><i class="fa fa-check"></i></span></td>
+                                <th class="text-center">1 000 руб.</th>
+                                <td class="text-center">Петров Петр Петрович</td>
+                                <td class="text-right"><a href="#" class="text-success"><i class="fa fa-gear"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td>11.07.2015</td>
+                                <td>Суть задачи</td>
+                                <td class="text-center">Иванов Иван Иванович</td>
+                                <td class="text-center">89180231562</td>
+                                <td class="text-center"><span tooltip="Could not connect!" class="text-warning ng-scope"><i class="fa fa-flash"></i></span></td>
+                                <th class="text-center">1 000 руб.</th>
+                                <td class="text-center">Петров Петр Петрович</td>
+                                <td class="text-right"><a href="#" class="text-success"><i class="fa fa-gear"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td>11.07.2015</td>
+                                <td>Суть задачи</td>
+                                <td class="text-center">Иванов Иван Иванович</td>
+                                <td class="text-center">89180231562</td>
+                                <td class="text-center"><span class="text-success"><i class="fa fa-check"></i></span></td>
+                                <th class="text-center">1 000 руб.</th>
+                                <td class="text-center">Петров Петр Петрович</td>
+                                <td class="text-right"><a href="#" class="text-success"><i class="fa fa-gear"></i></a></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-footer">
+                <ul class="pagination pagination-sm pull-right ng-scope">
+                    <li><a href="#">«</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">»</a></li>
+                </ul>
+                <div class="clearfix ng-scope"></div>
+            </div>
+        </div>
+    </div>
+</div>
 

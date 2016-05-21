@@ -22,3 +22,29 @@ select,
 textarea {
     max-width: 280px;
 }*/
+
+ul.tasks-types {
+    margin: 0;
+    padding: 10px 0;
+    list-style: none !important;
+}
+
+ul.tasks-types > li {
+    display: inline;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+ul.tasks-types > li > a.active {
+    color: black !important;
+}
+
+ul.tasks-types > li > a.active > .badge {
+    color: white;
+    background: black;
+}
+
+ul.tasks-types > li > a {
+    color: #a0a0a0 !important;
+}

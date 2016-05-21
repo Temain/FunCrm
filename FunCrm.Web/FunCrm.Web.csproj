@@ -300,6 +300,13 @@
     <Content Include="Fonts\fontawesome-webfont.ttf" />
     <Content Include="Fonts\fontawesome-webfont.eot" />
     <Content Include="Fonts\FontAwesome.otf" />
+    <None Include="Properties\PublishProfiles\Default Settings.pubxml" />
+    <None Include="Properties\PublishProfiles\file.pubxml" />
+    <None Include="Properties\PublishProfiles\ftp.pubxml" />
+    <Content Include="Properties\PublishProfiles\site1.PublishSettings" />
+    <None Include="Properties\PublishProfiles\webDeploy.pubxml">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -351,6 +358,7 @@
     <Content Include="Views\Home\_Tasks.cshtml" />
     <Content Include="Views\Home\_Analize.cshtml" />
     <Content Include="Views\Home\_Reports.cshtml" />
+    <Content Include="Views\Home\_Clients.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
